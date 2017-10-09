@@ -17,7 +17,7 @@ int main()
     fgets(buf, 8096, stdin);
 
     mysh_parse_command(buf, &argc, &argv);
-
+printf("argv[0] >> %s\n",argv[0]);
     if (strcmp(buf, "") == 0) {
       goto release_and_continue;
     } else if (strcmp(argv[0], "cd") == 0) {
